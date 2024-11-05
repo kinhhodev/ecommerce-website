@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: k-shop
+
+
+# General settings for UI/UX
+menu:
+  mode: light # light or dark
+  type: menu #sidebar or menu

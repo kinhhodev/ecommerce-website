@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title th:text="${PageTitle}"></title>
+    <th:block th:include="layout/admin-fragment.html :: head"></th:block>
+</head>
+<body th:attr="data-bs-theme=${PageMode}">
+<div class="page" >
+    <th:block th:replace="layout/admin-menu.html :: ${MenuType}"></th:block>
+
+    <div class="page-wrapper">
+        <th:block th:replace="layout/admin-fragment.html :: page-header"></th:block>
+
+        <div class="page-body" th:insert="${PageContent} :: page-body"></div>
+
+        <th:block th:replace="layout/admin-fragment.html :: footer"></th:block>
+
+    </div>
+
+    <th:block th:replace="layout/admin-fragment.html :: foot"></th:block>
+</div>
+</body>
+</html>
